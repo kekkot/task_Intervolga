@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Task 2</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+ </head>
+ <body>
+    <div class="main">
+        <div class="header">Шапка</div>
+        <div class="wrapper">
+            <button class="button" onclick="openModal()">Открыть модалку</button>
+            <div class="wrapper__content">тут будет текст</div>
+        </div>    
+        <div class="overlay" onclick="closeModal()"></div>
+        <div class="modal">
+            <form action="" id="modal" class="modal-window">
+                <h1 class="modal__title">Транспортные средства и водители</h1>
+                <p class="modal__text">Гос-номер</p>
+                <input type="text" name="Гос-номер" class="modal__input-text" placeholder="Укажите гос-номер" pattern="[A-ZА-Я]{1}\s\d{3}\s[A-ZА-Я]{2}\s\d{3}" title="Введите гос-номер в формате: А 999 АА 999" required>
+                <p class="modal__text">Транспортное средство</p>
+                <input type="text" name="Транспортное средство" class="modal__input-text" placeholder="Транспортное средство" required>
+                <p class="modal__text">Ориентировочная дата прибытия к покупателю</p>
+                <div class="select-date">
+                    <input type="text" id="date" name="Дата" class="select-date__input" placeholder="Дата*" required>
+                </div>                
+                <h2 class="modal__subtitle">Данные о водителе</h2>
+                <p class="modal__text">ФИО</p>
+                <input type="text" name="ФИО водителя" class="modal__input-text" placeholder="Укажите ФИО водителя" required>
+                <p class="modal__text">Паспортные данные</p>
+                <div class="row">
+                    <input type="text" name="Серия" class="modal__input-text row__w-49" placeholder="Серия" title="Пожалуйсте, введите серию паспорта, состоящую из 4 цифр" data-mask-pattern="____" pattern="[0-9]{4}" required>
+                    <input type="text" name="Номер" class="modal__input-text row__w-49" placeholder="Номер" title="Пожалуйсте, введите номер паспорта, состоящий из 6 цифр" data-mask-pattern="______" pattern="[0-9]{6}" required>
+                </div>
+                <p class="modal__text">Кем выдан</p>
+                <input type="text" name="Кем выдан" class="modal__input-text" placeholder="Кем выдан" required>
+                <p class="modal__text">Когда выдан</p>
+                <input type="text" name="Когда выдан" class="modal__input-text" placeholder="Когда выдан" required>
+                <div class="row modal__bottom">
+                    <input type="submit" id="getForm" class="button" value="Отправить">
+                    <button type="button" class="button button_cancle modal__button-cancle">Отменить</button>
+                </div>
+            </form>
+        </div>    
+        <div class="footer">Подвал</div>
+      </div>
+ </body> 
+</html>

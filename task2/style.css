@@ -1,0 +1,133 @@
+.main {        
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    background-color: #FFFFFF;
+    font-size: 16px;
+    .header {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+        margin-top: auto;
+        background-color: blueviolet;
+    }
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    .wrapper__content{
+        width: 50%;        
+    }
+    .button{
+        width: fit-content;
+        padding: 15px 30px;
+        background: #000000;
+        border-radius: 8px;
+        color: #FFFFFF;
+        transition: background 0.3s ease;
+        user-select: none;
+    }
+    .button:active{
+        box-shadow: inset 1px 1px 10px -1px;
+        background: #FFFFFF;
+        color: #000;
+    }
+    .overlay{        
+        background: rgba(102, 102, 102, 0.5);
+        z-index: 10;        
+        position: fixed;
+    }
+    .overlay, 
+    .modal{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .modal{
+        position: absolute;
+    }
+    .open{
+        display: block;
+    }
+    .modal-window{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        text-align: center;
+        padding: 40px;
+        border: 3px solid #000000;
+        color: #000000;
+        margin: auto;
+        background: #fff;
+        position: relative;
+        z-index: 30;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .modal__title{
+        margin: 0;
+        font-size: 1.25rem;
+    }
+    .modal__subtitle{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .modal__text{
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+    .modal__input-text,
+    .select-date__input,
+    .select-date__placeholder{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 10px;
+        border: 1px solid #000;
+    }
+    .modal__input-text::placeholder{
+        color: rgb(102, 102, 102);
+    }
+    /*.modal__input-text:invalid{
+        border-color: red;
+    }*/
+    .modal__input-text:valid{
+        border-color: green;
+    }
+    .select-date{
+        width: 100%;
+        position: relative;
+    }
+    .select-date__input{
+        width: 100%;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .row__w-49{
+        width: 49%;
+    }
+    .modal__bottom{
+        margin-top: 40px;
+    }
+    .button_cancle{
+        background: #FFFFFF;
+        border: 1px solid #000;
+        color: #000;
+        border-bottom: 2px solid #000;
+    }
+    .modal__button-cancle{
+        margin-left: 8px;
+    }
+}
+body{
+    margin: 0;
+}
